@@ -36,7 +36,6 @@ int main()
     SIZE_T allocation_size = sizeof(shellcode);
     LPCWSTR cmd;
     HANDLE hProcess, hThread;
-    NTSTATUS status;
 
     ZeroMemory(&si, sizeof(si));
     ZeroMemory(&pi, sizeof(pi));
