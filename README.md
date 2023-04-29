@@ -1,7 +1,9 @@
 # Técnica EarlyBirdAPC empleando LowLevelAPI
 
 
-Dando un vistazo al buen ejemplo de la Técnica EarlyBirdAPC con LowLevelAPI empleada en el post https://sevrosecurity.com/2020/04/13/process-injection-part-2-queueuserapc/ obervé que les faltaba poner una de las funciones en LowLevelAPI, asi que me puse manos a la obra e hice los cambios pertinentes para poder tener la técnica mostrada esta vez si a FULL LowLevelAPI. La funcion del post no migrada a LowLevelAPI era WaitForSingleObject de MediumLevelAPI y la pasamos a NtWaitForSingleObject para LowLevelAPI, de forma que podemos reducir las funciones importadas a Kernel32.dll del post mencionado y como quedan después al hacer el cambio.
+Dando un vistazo al buen ejemplo de la Técnica EarlyBirdAPC con LowLevelAPI empleada en el post https://sevrosecurity.com/2020/04/13/process-injection-part-2-queueuserapc/ obervé que les faltaba poner una de las funciones en LowLevelAPI, asi que me puse manos a la obra e hice los cambios pertinentes para poder tener la técnica mostrada esta vez si a FULL LowLevelAPI. 
+
+La funcion del post no migrada a LowLevelAPI era WaitForSingleObject de MediumLevelAPI y la pasamos a NtWaitForSingleObject para LowLevelAPI, de forma que podemos reducir las funciones importadas a Kernel32.dll del post mencionado y como quedan después al hacer el cambio.
 
 # Probado en:
 
